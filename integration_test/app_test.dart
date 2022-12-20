@@ -17,6 +17,8 @@ void main() {
     await tester.tap(find.byIcon(Icons.add));
     await tester.pump();
 
+    await tester.pump(const Duration(seconds: 3));
+
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
   });
